@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Created react js fb clone- 
+i created a react fb clone from the fb project i was working on
+the project whereby you can create and post a comment a post
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
