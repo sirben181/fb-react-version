@@ -1,6 +1,9 @@
 import React from 'react'
 import '../index.css'
 import man4 from '../images/man4.jpg'
+import prof from '../images/prof.jpg'
+
+import man3 from '../images/man3.jpg'
 import woma2 from '../images/woma2.jpg'
 import woman1 from '../images/woman1.jpg'
 
@@ -25,7 +28,7 @@ const Posts = () => {
                                     <span>Hello thats a throw back</span>
                                 </div>
                                 <div class="postphoto">
-                                    <img src="./images/man3.jpg" alt="" />
+                                    <img src={man3} alt="" />
                                 </div>
                             
                                 <div class="likescounter">
@@ -81,7 +84,7 @@ const Posts = () => {
                                   <div class="comments-input">
                                      <div class="input-wrapper">
                                         <div class="input-content commentbar">
-                                            <img src="./images/prof.jpg" alt=""/>
+                                            <img src={prof} alt=""/>
                                             <input  class=" input-bar" type="text" placeholder="What's on your mind,Benson?"/>
                                                 <div class="commentbar-icons">
                                                 <i class="far fa-smile"></i>

@@ -17,13 +17,13 @@ const Chatrooms = () => {
                 <i class="fas fa-video"></i><p>createRoom</p>
             </div>
             <div class="rooms">
-                <img src={woman1} />
-                <img src={woma2} />
-                <img src={woman3} />
-                <img src={woman4}/>
-                <img src={man1}/>
-                <img src={man2}/>
-                <img src={man3}/>
+                <img src={woman1}alt="" />
+                <img src={woma2} alt=""/>
+                <img src={woman3}alt="" />
+                <img src={woman4} alt=""/>
+                <img src={man1} alt=""/>
+                <img src={man2} alt=""/>
+                <img src={man3}alt=""/>
                 <div class="addmore"><i class="fas fa-chevron-right"></i></div>
             </div>
         </div>
