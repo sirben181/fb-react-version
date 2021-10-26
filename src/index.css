@@ -354,10 +354,15 @@ background:#ddd;}
 .singlestatus4 img:hover{transform:scale(1.01);
     background:#ddd;
 }
-.input-container{ 
-    display:flex;
+.input-container{  display:flex;
     margin-left:150px;
+position:relative;
+margin-bottom:50px;}
+.input-container1{ 
+    display:flex;
     width:100%;
+    position: absolute;
+    z-index:5;
 }
 .input-wrapper{
     display:flex;
@@ -400,16 +405,26 @@ background:#ddd;}
 .postForm-container{
     display:flex;    
     min-height:20vh;
-    max-height:100vh;
+    height:50vh;
     width:100%;
+    /* opacity:0; */
+    position:absolute;
 }
 .postForm{
     display:flex;
     flex-direction:column;
     height:100%;
     width:100%;
-    background:blue;
     position:relative;
+    z-index:4;
+}
+.input-post{
+    height:100%;
+    min-height: 20vh;
+    width:100%;
+    border:none;
+    outline:none;
+    font-size:25px;
 }
 .postForm h2{
     text-align:center;

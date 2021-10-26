@@ -8,7 +8,7 @@ import Statuses from './Statuses'
 const Maincontent = () => {
     return (
         <div className="main-container">
-            <div className="main-container-wrapper">
+            <div className="main-container-wrapper" style={{paddingBottom:'50px'}}>
                  <Statuses />
                  <Inputcontent />
                  <Chatrooms />

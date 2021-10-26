@@ -7,6 +7,7 @@ const Inputcontent = () => {
 
     return (
         <div class="input-container">
+        <div class="input-container1">
            <div class="input-wrapper">
               <div className="first-input">
              <div class="input-content">
@@ -30,18 +31,18 @@ const Inputcontent = () => {
                 </div>
             </div>
             </div>
-            <div className="postForm-container">
-            <div className='postForm'>
-                <h2>Create Post</h2>
-                <div className="profT"> 
-                    <img src={prof} alt="" className="smallProfile"/> 
-                    <span>Samuel Maina</span>
-                </div>
-                <span name="" id="commentPad"></span>
-                <button className="btn-post" type="submit">Post</button>
-            </div>
-            </div>
         </div>
+    </div>
+    <div className="postForm-container">
+    <div className='postForm'>
+        <h2>Create Post</h2>
+        <div className="profT"> 
+            <img src={prof} alt="" className="smallProfile"/> 
+            <textarea type="textrarea" class="input-post"/>                </div>
+        <span name="" id="commentPad"></span>
+        <button className="btn-post" type="submit">Post</button>
+    </div>
+    </div>
     </div>
     )
 }
