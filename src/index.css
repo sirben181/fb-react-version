@@ -356,12 +356,11 @@ background:#ddd;}
 }
 .input-container{  display:flex;
     margin-left:150px;
-position:relative;
-margin-bottom:50px;}
+/* margin-bottom:50px; */
+}
 .input-container1{ 
     display:flex;
     width:100%;
-    position: absolute;
     z-index:5;
 }
 .input-wrapper{

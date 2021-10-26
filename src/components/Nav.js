@@ -7,27 +7,21 @@ import {FaUsers} from 'react-icons/fa'
 import  watch from '../images/watch.svg'
 import store from '../images/store.svg'
 
-const Nav = () => {
-    const links=document.querySelectorAll('.navlist')
-    links.forEach((link=>
-        link.addEventListener('click', (e)=>{
-            e.preventDefault();
-        console.log('click')
-        })
-        ))
+const Nav = ({onAdd}) => {
+
     return (
         <div className='nav-wrapper'>
             <ul>
-            <li className='home navlist'>
+            <li className='home navlist' onClick={onAdd}>
                 <Link to='#'><FaHome className="navhome"/></Link>
             </li>
-            <li className="watch navlist">
+            <li className="watch navlist" onClick={onAdd}>
                 <Link to='#'><img src={watch} alt=""/></Link>
             </li>
-            <li className='market navlist'>
+            <li className='market navlist' onClick={onAdd}>
                 <Link to='#'><img src={store} alt="" /></Link>
             </li>
-            <li className="groups navlist">
+            <li className="groups navlist" onClick={onAdd}>
                 <Link to='#'>
                     <FaUsers className="navgroups" />
                     {/* <FaBars  className="group-top"/> */}

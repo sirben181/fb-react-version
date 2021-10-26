@@ -33,7 +33,7 @@ const Inputcontent = () => {
             </div>
         </div>
     </div>
-    <div className="postForm-container">
+    {/* <div className="postForm-container">
     <div className='postForm'>
         <h2>Create Post</h2>
         <div className="profT"> 
@@ -42,7 +42,7 @@ const Inputcontent = () => {
         <span name="" id="commentPad"></span>
         <button className="btn-post" type="submit">Post</button>
     </div>
-    </div>
+    </div> */}
     </div>
     )
 }

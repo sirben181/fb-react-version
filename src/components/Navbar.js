@@ -4,12 +4,12 @@ import '../index.css'
 import Nav from './Nav'
 import Navright from './Navright'
 
-const Navbar = () => {
+const Navbar = ({onAdd}) => {
     return (
         <div className='nav'>
             <div className='nav-container'>
             <Searchbar />
-            <Nav />
+            <Nav onAdd={onAdd}/>
             <Navright />
         
             </div> 
