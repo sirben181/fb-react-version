@@ -1,6 +1,7 @@
 # Created react js fb clone- 
 i created a react fb clone from the fb project i was working on
-the project whereby you can create and post a comment a post
+the project whereby you can create and post a comment a post just enjoying reacts
+
 
 
 ## Available Scripts
