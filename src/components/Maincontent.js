@@ -13,6 +13,7 @@ const Maincontent = () => {
                  <Inputcontent />
                  <Chatrooms />
                  <Posts />
+                 <Posts />
 
             </div>
         </div>

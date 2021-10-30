@@ -14,11 +14,20 @@ import Grid from './components/Grid';
 //     const OpenTextArea=()=>{
      
 //     }
+const addActive=(e)=>{
+//  const links=document.querySelector('.navlist')
+ const here=e.target
+if(here.classList.contains('active')){
+    here.classList.remove('active')
+} else{
+    here.classList.add('active')
+}
+    }
     return (
         <div>
             <Router>
         
-            <Navbar />
+            <Navbar onAdd={addActive} />
             <Grid />
             </Router>
            

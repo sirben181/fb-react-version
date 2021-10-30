@@ -3,6 +3,7 @@
 padding:0;}
     body{background:#ddd;}
 .nav{display:flex;
+    justify-content:space-between;
     width:100%;
     position:fixed;
     height:70px;
