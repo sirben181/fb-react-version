@@ -10,15 +10,15 @@ import store from '../images/store.svg'
 const Nav = ({onAdd}) => {
 
     return (
-        <div className='nav-wrapper'>
+        <div className='nav-wrapper' >
             <ul>
-            <li className='home navlist' onClick={onAdd}>
+            <li className='home navlist' onClick={onAdd} >
                 <Link to='#'><FaHome className="navhome"/></Link>
             </li>
-            <li className="watch navlist" onClick={onAdd}>
+            <li className="watch navlist" onClick={onAdd} >
                 <Link to='#'><img src={watch} alt=""/></Link>
             </li>
-            <li className='market navlist' onClick={onAdd}>
+            <li className='market navlist' onClick={onAdd} >
                 <Link to='#'><img src={store} alt="" /></Link>
             </li>
             <li className="groups navlist" onClick={onAdd}>

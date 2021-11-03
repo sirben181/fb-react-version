@@ -14,15 +14,13 @@ import Grid from './components/Grid';
 //     const OpenTextArea=()=>{
      
 //     }
-const addActive=(e)=>{
-//  const links=document.querySelector('.navlist')
- const here=e.target
-if(here.classList.contains('active')){
-    here.classList.remove('active')
-} else{
-    here.classList.add('active')
+const addActive=(event)=>{
+ const links=document.querySelector('.navlist')
+links.filter((link)=>link.event.target!==event.target)
+    console.log('filtered')
+
 }
-    }
+    
     return (
         <div>
             <Router>
