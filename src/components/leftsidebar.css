@@ -1,0 +1,10 @@
+*{box-sizing:border-box;}
+.left-sidebar{display:flex;
+width:auto;}
+.leftsidebar-container{display:flex;
+flex-direction:column;
+}
+.submenu{
+    padding:10px;
+}
+.submenu:hover{background:#ddd;}

@@ -1,28 +1,27 @@
 import React from 'react'
 import prof from '../images/prof.jpg'
-import '../index.css'
+import './leftsidebar.css'
 
 const LeftSideBar = () => {
     return (
-        <div className="wrapper">
                 <div className="left-sidebar">
-                <div className="content-container">
-                    <div className="left-profile-flex">
+                <div className="leftsidebar-container">
+                    <div className="left-profile-flex submenu">
                       <image src={prof} className="left-profile-link" /> <h5>Benson Kamau</h5>
                     </div>
-                    <div className="friends">
+                    <div className="friends submenu">
                         <a href="#">Friends</a>
                     </div>
-                    <div className="watch">
+                    <div className="watch submenu">
                         <a href="#">Watch</a>
                     </div>
-                    <div className="groups">
+                    <div className="groups submenu">
                         <a href="#">Groups</a>
                     </div>
-                    <div className="market">
+                    <div className="market submenu">
                         <a href="#">Marketplace</a>
                     </div>
-                    <div className="saved">
+                    <div className="saved submenu">
                         <a href="#">saved</a>
                     </div>
 
@@ -35,7 +34,7 @@ const LeftSideBar = () => {
                   <a href="">Chuka university</a>
                 </div>
              </div>
-        </div>
+       
     )
 }
 

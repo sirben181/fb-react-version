@@ -1,9 +1,10 @@
-import React from 'react'
+import React,{useState}from 'react'
 import prof from '../images/prof.jpg'
 import '../index.css'
 
 const Inputcontent = () => {
-    
+    const [input,setInput]=useState('')
+
 
     return (
         <div class="input-container">
@@ -12,7 +13,8 @@ const Inputcontent = () => {
               <div className="first-input">
              <div class="input-content">
                 <img src={prof} alt="" className="smallProfile"/>
-                <input  class=" input-bar" type="text"
+                <input  class=" input-bar" type="text" value={input}
+                onChange={(e)=>setInput(e.target.value)}
                  placeholder="What's on your mind,Benson?" />
             </div>
             
