@@ -7,12 +7,10 @@ flex-direction:column;
 .submenu{
     padding:10px;
 }
-.submenu:hover{background:rgba(219, 214, 214, 0.226);
+.submenu:hover{background:rgb(204, 202, 202);
 border-radius:6px;}
-.shortcuts{
-    padding:13px;
-
-}
-.shortcuts:hover{
-    background:rgb(161, 161, 161);
-}
+.shortcuts a{display:flex;
+flex-direction:column;
+padding:10px;}
+.shortcuts a:hover{background:rgb(207, 207, 207);
+border-radius:6px;}

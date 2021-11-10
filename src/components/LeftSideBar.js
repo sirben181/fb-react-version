@@ -33,6 +33,7 @@ const LeftSideBar = () => {
                   <a href=""> Biochemistry</a>
                   <a href="">Chuka university</a>
                 </div>
+               <small>privacy .terms  .copyright&copy;2021</small>
              </div>
        
     )

@@ -14,7 +14,10 @@ const Inputcontent = () => {
              <div class="input-content">
                 <img src={prof} alt="" className="smallProfile"/>
                 <input  class=" input-bar" type="text" value={input}
-                onChange={(e)=>setInput(e.target.value)}
+                onChange={(e)=>{
+                e.preventDefault()
+                    setInput(e.target.value)
+                console.log(e.target.value)}}
                  placeholder="What's on your mind,Benson?" />
             </div>
             
