@@ -7,4 +7,12 @@ flex-direction:column;
 .submenu{
     padding:10px;
 }
-.submenu:hover{background:#ddd;}
+.submenu:hover{background:rgba(219, 214, 214, 0.226);
+border-radius:6px;}
+.shortcuts{
+    padding:13px;
+
+}
+.shortcuts:hover{
+    background:rgb(161, 161, 161);
+}
