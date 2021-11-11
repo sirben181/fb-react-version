@@ -4,16 +4,14 @@ import Navbar from './components/Navbar';
 import {BrowserRouter as Router} from 'react-router-dom'
 import './index.css';
 import Grid from './components/Grid';
+import Login from './components/Login';
  const App = () => {
-//     const [AddPost,setAddPost]=useState(false)
-//     const [posts,setPosts]=useState('')
+  const user="ben"
+//create a local firebase and a remote firebase
+//connect the data base
+//create the context api 
+//grab the posts from the data base
 
-//    AddPost=(post)=>{ const id=Math.floor(Math.random()*10000)+1
-//     const newPost={id,...post}
-//     setPosts([...posts,newPost])}
-//     const OpenTextArea=()=>{
-     
-//     }
 const addActive=(event)=>{
  const links=document.querySelector('.navlist')
 links.filter((link)=>link.event.target!==event.target)
@@ -23,11 +21,13 @@ links.filter((link)=>link.event.target!==event.target)
     
     return (
         <div>
-            <Router>
-        
-            <Navbar onAdd={addActive} />
-            <Grid />
-            </Router>
+            {!user ? (<Login />):( 
+                 <Router>
+                 <Navbar onAdd={addActive} />
+                 <Grid />
+                 </Router>
+            )}
+           
            
         </div>
     )

@@ -4,7 +4,10 @@ import '../index.css'
 
 const Inputcontent = () => {
     const [input,setInput]=useState('')
-
+ const handleSubmit=(e)=>{
+   e.preventDefault();
+   setInput('')
+ }
 
     return (
         <div class="input-container">
@@ -13,12 +16,16 @@ const Inputcontent = () => {
               <div className="first-input">
              <div class="input-content">
                 <img src={prof} alt="" className="smallProfile"/>
-                <input  class=" input-bar" type="text" value={input}
-                onChange={(e)=>{
-                e.preventDefault()
-                    setInput(e.target.value)
-                console.log(e.target.value)}}
-                 placeholder="What's on your mind,Benson?" />
+               
+               <form>
+                    <input  class=" input-bar" type="text" 
+                    value={input}
+                onChange={(e)=>setInput(e.target.value)}
+                placeholder="What's on your mind,Benson?" />
+             <button type="submit"
+              style={hiddenBtn}
+             class='hiddenBtn' onClick ={handleSubmit}>Hidden btn</button>
+             </form>
             </div>
             
             <div class="inputType">
@@ -51,5 +58,5 @@ const Inputcontent = () => {
     </div>
     )
 }
-
+ const hiddenBtn={display:'none'}
 export default Inputcontent
