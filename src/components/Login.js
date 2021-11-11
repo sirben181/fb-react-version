@@ -8,7 +8,7 @@ const Login = () => {
         auth.signinWithPopuP(provider)
         .then(result=>{
             console.log(result)
-        }).catch((error)=>alert(erro.message))
+        }).catch((error)=>alert(error.message))
      
     }
     
