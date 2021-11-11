@@ -1,3 +1,4 @@
+import firebase from 'firebase'
 const firebaseConfig = {
     apiKey: "AIzaSyByo-Ibk-hn-lRW5NUX6KMya2Wc5xrOfpk",
     authDomain: "fb-react-version.firebaseapp.com",
@@ -7,6 +8,18 @@ const firebaseConfig = {
     appId: "1:884197277505:web:4528de85ea63577ae7ebc0",
     measurementId: "G-7VE21YTR0H"
   };
+  const app = initializeApp(firebaseConfig);
+  const db=firebaseApp.firestore
+  const auth=firebase.auth()
+  const provider=new firebase.auth.GoogleAuthProvider()
+
+
+
+export{auth,provider};
+export default db;
+
+
+
 // Import the functions you need from the SDKs you need
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
