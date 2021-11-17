@@ -6,7 +6,7 @@ import './index.css';
 import Grid from './components/Grid';
 import Login from './components/Login';
  const App = () => {
-  const user="ben"
+  const user=""
 //create a local firebase and a remote firebase
 //connect the data base
 //create the context api 
