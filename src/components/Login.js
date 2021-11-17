@@ -1,14 +1,14 @@
 import React from 'react'
 import {FaFacebookSquare} from 'react-icons/fa'
 import './Login.css'
-import{auth,provider} from "./fire"
+// import{auth,provider} from "./fire"
 const Login = () => {
     const signIn=()=>{
         signIn
-        auth.signinWithPopuP(provider)
-        .then(result=>{
-            console.log(result)
-        }).catch((error)=>alert(error.message))
+        // auth.signinWithPopuP(provider)
+        // .then(result=>{
+        //     console.log(result)
+        // }).catch((error)=>alert(error.message))
      
     }
     
