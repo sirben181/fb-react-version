@@ -16,12 +16,12 @@ const Posts = () => {
                                     <div class="post-header">
                                         <div class="post-profile">
                                         <img src={man4} class="post-img"  alt=""/>
-                                            <p class="profilename-cont">
+                                            <div class="profilename-cont">
                                                 <p class="profilename">Steven James </p> 
                                                 <small>is at</small> 
                                                 <p class="profilename"> Chuka </p> 
                                                 <p class="date">OCt 17 at 1400hrs</p>
-                                            </p>
+                                            </div>
                                         </div>
                                         <button>...</button>
                                     </div>
