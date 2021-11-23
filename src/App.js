@@ -5,9 +5,12 @@ import {BrowserRouter as Router} from 'react-router-dom'
 import './index.css';
 import Grid from './components/Grid';
 import Login from './components/Login';
+import { useStateValue } from './components/StateProvider';
 import db from './components/firebase'
  const App = () => {
-  const user=""
+     const [{user},dispatch]=useStateValue()
+     
+ 
 //create a local firebase and a remote firebase
 //connect the data base
 //create the context api 

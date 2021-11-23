@@ -1,9 +1,13 @@
 import React,{useState}from 'react'
 import prof from '../images/prof.jpg'
 import '../index.css'
+import {useStateValue} from "./StateProvider";
 
-const Inputcontent = () => {
+
+const Inputcontent = ({displayName}) => {
+
     const [input,setInput]=useState('')
+    const[{user},dispatch]=useStateValue()
  const handleSubmit=(e)=>{
    e.preventDefault();
    setInput('')
@@ -15,13 +19,14 @@ const Inputcontent = () => {
            <div class="input-wrapper">
               <div className="first-input">
              <div class="input-content">
-                <img src={prof} alt="" className="smallProfile"/>
+                <img src={user.photoURL} alt="" className="smallProfile"/>
                
                <form>
                     <input  class=" input-bar" type="text" 
                     value={input}
                 onChange={(e)=>setInput(e.target.value)}
-                placeholder="What's on your mind,Benson?" />
+             placeholder="What's on your mind {displayName}" 
+             />
              <button type="submit"
               style={hiddenBtn}
              class='hiddenBtn' onClick ={handleSubmit}>Hidden btn</button>
