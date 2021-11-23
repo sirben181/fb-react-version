@@ -22,14 +22,16 @@ const Maincontent = () => {
                  <Statuses />
                  <Inputcontent />
                  <Chatrooms />
-                 <Posts profPic={posts.postphoto}
+                 
+                {posts.map((posts)=>( 
+                <Posts profPic={posts.postphoto}
                  comments={posts.comments}
                  postPhoto={posts.postphoto}
                  Timestamp={posts.timestamp}
                 userName={posts.profilePic}
                  message={posts.span}
 
-                 />
+                 />))}
                 
 
             </div>

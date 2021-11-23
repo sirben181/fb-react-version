@@ -23,12 +23,12 @@ const Posts = ({profPic,userName,Timestamp,message,postphoto,comments}) => {
                                         <img src={profPic}man class="post-img"  alt=""/>
                                             <div class="profilename-cont">
                                                 <p class="profilename">{userName} </p> 
-                                                <small>is at</small> 
-                                                <p class="profilename"> Chuka </p> 
+                                                {/* <small>is at</small>  */}
+                                                {/* <p class="profilename"> Chuka </p>  */}
                                                 <p class="date">{Timestamp}</p>
                                             </div>
                                         </div>
-                                        <button>...</button>
+                                        {/* <button>...</button> */}
                                     </div>
                                     <span>{message}</span>
                                 </div>
@@ -41,24 +41,24 @@ const Posts = ({profPic,userName,Timestamp,message,postphoto,comments}) => {
                                         <i class="fas fa-thumbs-up"></i>
                                     </div>
                                     <div class="commentcount">
-                                    <span>{comments}</span><span> 1 share</span>
+                                    <span>{comments}</span><span> </span>
                                     </div>
                                 </div>
                                 <div class="likescounter">
                                     <div class="like">
                                         <i class="fas fa-thumbs-up"></i>
-                                        <span>like</span>
+                                        {/* <span>like</span> */}
                                     </div>
                                     <div class="comment"> 
                                         <i class="far fa-comment-alt"></i>
-                                        <span>Comment</span>
+                                        {/* <span>Comment</span> */}
                                     </div>
                                     <div class="share">
                                         <i class="fas fa-share"></i>
-                                        <span>share</span>
+                                        {/* <span>share</span> */}
                                     </div>
                                 </div>
-                                <span class='singlecomment opencomments'> view one more comment</span>
+                                {/* <span class='singlecomment opencomments'> view one more comment</span>
                                 <div class="comments">
                                     <div class='comments-cont'>
                                     <div class="commenting-profile">
@@ -85,8 +85,8 @@ const Posts = ({profPic,userName,Timestamp,message,postphoto,comments}) => {
                                     <small class='likereply'> <p>like.</p><p> reply</p></small>
                                 </div>
                                 <span class="multiplecomments opencomments">view 7more comments</span>
-                                  <div class="comments-input">
-                                     <div class="input-wrapper">
+                                  <div class="comments-input">*/}
+                                     <div class="input-wrapper"> 
                                         <div class="input-content commentbar">
                                             <img src={prof} alt=""/>
                                             <input  class=" input-bar" type="text" placeholder="What's on your mind,Benson?"/>
@@ -98,7 +98,7 @@ const Posts = ({profPic,userName,Timestamp,message,postphoto,comments}) => {
                                      </div>
                                  </div>
                            </div>
-                        </div>
+                        // </div>
     )
 }
 
