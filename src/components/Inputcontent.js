@@ -2,6 +2,8 @@ import React,{useState}from 'react'
 import prof from '../images/prof.jpg'
 import '../index.css'
 import {useStateValue} from "./StateProvider";
+import db from './firebase';
+import firebase from'firebase'
 
 
 const Inputcontent = ({displayName}) => {
@@ -10,6 +12,14 @@ const Inputcontent = ({displayName}) => {
     const[{user},dispatch]=useStateValue()
  const handleSubmit=(e)=>{
    e.preventDefault();
+   db.collection("posts").add({
+       message:input,
+       timestamp:firebase.firestore.FieldValue
+       .serverTimestamp(),
+       profilePic:user.photoURL,
+       username:user.displayName,
+
+   })
    setInput('')
  }
 
@@ -25,7 +35,7 @@ const Inputcontent = ({displayName}) => {
                     <input  class=" input-bar" type="text" 
                     value={input}
                 onChange={(e)=>setInput(e.target.value)}
-             placeholder="What's on your mind {displayName}" 
+             placeholder="What's on your mind {user.displayName}" 
              />
              <button type="submit"
               style={hiddenBtn}
