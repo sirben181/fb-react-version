@@ -12,7 +12,7 @@ import storage from './firebase'
 const Inputcontent = () => {
 
     const [input,setInput]=useState('')
-    const [imageToPost,setImageToPost]=useState('')
+    const [imageToPost,setImageToPost]=useState(null)
     const[{user},dispatch]=useStateValue()
     const filepickerRef=useRef(null)
  const handleSubmit=(e)=>{
@@ -27,11 +27,10 @@ const Inputcontent = () => {
    
    }).then(doc=>{
        if(imageToPost){
-           const uploadTask=storage
-           .ref(`posts/${doc.id}`).putString(imageToPost,
+           const uploadTask=storage.ref(`posts/${doc.id}`).putString(imageToPost,
             'data_url')
             removeImage();
-            uploadTask.on('state_change',
+            uploadTask.on('state_changed',
             null,
             (error)=>console.error(error),
             ()=>{
@@ -53,10 +52,13 @@ const Inputcontent = () => {
     }
     reader.onload=(readerEvent)=>{
         setImageToPost(readerEvent.target.result)
+        
     }
+
+   
  }
  const removeImage=()=>{
-    setImageToPost('') 
+    setImageToPost(null) 
  }
 
     return (
@@ -74,8 +76,9 @@ const Inputcontent = () => {
              placeholder="What's on your mind {username}" 
              />
              <button type="submit"
-              style={hiddenBtn}
-             class='hiddenBtn' onClick ={handleSubmit}>Hidden btn</button>
+              hidden
+             class='hiddenBtn' 
+             onClick ={handleSubmit}>Hidden btn</button>
              </form>
              {imageToPost && (
                  <div className="removeimage"
