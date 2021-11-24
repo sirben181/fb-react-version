@@ -3,8 +3,10 @@ import prof from '../images/prof.jpg'
 import '../index.css'
 import './inputcontent.css'
 import {useStateValue} from "./StateProvider";
-import db from './firebase';
 import firebase from'firebase'
+import db from './firebase';
+import storage from './firebase'
+
 
 
 const Inputcontent = () => {
@@ -22,7 +24,25 @@ const Inputcontent = () => {
        .serverTimestamp(),
        profilePic:user.photoURL, 
        username:user.displayName,
-
+   
+   }).then(doc=>{
+       if(imageToPost){
+           const uploadTask=storage
+           .ref(`posts/${doc.id}`).putString(imageToPost,
+            'data_url')
+            removeImage();
+            uploadTask.on('state_change',
+            null,
+            (error)=>console.error(error),
+            ()=>{
+            storage.ref('posts').child(doc.id).getDownloadURL()
+            .then(url=>{
+                db.collection('posts').doc(doc.id).set({
+                    postImage:url
+                },{merge:true})
+            })
+            })
+       }
    })
    setInput('')
  }
@@ -51,7 +71,7 @@ const Inputcontent = () => {
                     <input  class=" input-bar" type="text" 
                     value={input}
                 onChange={(e)=>setInput(e.target.value)}
-             placeholder="What's on your mind {user.displayName}" 
+             placeholder="What's on your mind {username}" 
              />
              <button type="submit"
               style={hiddenBtn}
@@ -59,7 +79,7 @@ const Inputcontent = () => {
              </form>
              {imageToPost && (
                  <div className="removeimage"
-                  onClick={removeImage}>
+                     onClick={removeImage}>
                      <image src={imageToPost} alt=""
                      className="imagepost"/>
                      <p className="textimage">remove</p>

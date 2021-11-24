@@ -1,19 +1,18 @@
 *{box-sizing:border-box;}
 .removeimage{display:flex;
     flex-direction:column;
-    transition: transform 150ms;
+   
     cursor:pointer;
 }
 .removeimage:hover{
-    filter:brightness(1.10);
-    transform:scale(1.1);
-   
+    /* filter:brightness(1.10); */
 }
 .imagepost{ object-fit:contain;
-height:2.5rem;}
+height:2.5rem;
+width:2.5rem;}
 .textimage{
  color:red;
- font-size: x-small;
+ font-size: normal;
  font-weight:500;
  text-align:center;
 }
