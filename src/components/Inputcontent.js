@@ -1,26 +1,42 @@
-import React,{useState}from 'react'
+import React,{useRef, useState}from 'react'
 import prof from '../images/prof.jpg'
 import '../index.css'
+import './inputcontent.css'
 import {useStateValue} from "./StateProvider";
 import db from './firebase';
 import firebase from'firebase'
 
 
-const Inputcontent = ({displayName}) => {
+const Inputcontent = () => {
 
     const [input,setInput]=useState('')
+    const [imageToPost,setImageToPost]=useState('')
     const[{user},dispatch]=useStateValue()
+    const filepickerRef=useRef(null)
  const handleSubmit=(e)=>{
    e.preventDefault();
-   db.collection("posts").add({
+   if(!input)return
+   db.collection("posts",'desc').add({
        message:input,
        timestamp:firebase.firestore.FieldValue
        .serverTimestamp(),
-       profilePic:user.photoURL,
+       profilePic:user.photoURL, 
        username:user.displayName,
 
    })
    setInput('')
+ }
+ const addImageToPost=(e)=>{
+    const reader=new FileReader()
+    if(e.target.files[0]){
+        reader.readAsDataURL(e.target.files[0]);
+    }
+    reader.onload=(readerEvent)=>{
+        setImageToPost(readerEvent.target.result)
+    }
+ }
+ const removeImage=()=>{
+    setImageToPost('') 
  }
 
     return (
@@ -41,6 +57,14 @@ const Inputcontent = ({displayName}) => {
               style={hiddenBtn}
              class='hiddenBtn' onClick ={handleSubmit}>Hidden btn</button>
              </form>
+             {imageToPost && (
+                 <div className="removeimage"
+                  onClick={removeImage}>
+                     <image src={imageToPost} alt=""
+                     className="imagepost"/>
+                     <p className="textimage">remove</p>
+                 </div>
+             )}
             </div>
             
             <div class="inputType">
@@ -48,9 +72,15 @@ const Inputcontent = ({displayName}) => {
                     <i class="fas fa-video"></i>
                     <p>live video</p>
                 </div>
-                <div class="gallery">
+                <div class="gallery"  
+                onClick={()=>filepickerRef.current.click()}>
                     <i class="far fa-images"></i>
                     <p>photos</p>
+                    <input type="file" hidden 
+                    ref={filepickerRef}
+                    onChange={addImageToPost}
+                   
+                    />
                 </div>
                 <div class="feeling">
                     <i class="far fa-smile"></i>
