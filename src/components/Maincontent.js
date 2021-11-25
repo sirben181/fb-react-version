@@ -4,22 +4,10 @@ import Chatrooms from './Chatrooms'
 import Inputcontent from './Inputcontent'
 import Posts from './Posts'
 import Statuses from './Statuses'
-import { useStateValue } from './StateProvider';
-import db from './firebase'
+
 
 const Maincontent = () => {
-    const [posts,setPosts]=useState()
-   
-    useEffect(()=>{
-        db.collection('posts')
-        .orderBy("timestamp")
-        .onSnapshot((snapshot)=>{
-         setPosts(snapshot.docs.map((doc)=>{ 
-        //  id:doc.id
-        //  data:doc.data();     
-        } ))
-         })
-           },[])
+  
           
     return (
         <div className="main-container">
@@ -27,18 +15,10 @@ const Maincontent = () => {
                  <Statuses />
                  <Inputcontent />
                  <Chatrooms />
-                 
-                {/* {posts.map((posts)=>{ */}
-                        <Posts 
-                // key={posts.id}
-                // profilePic={posts.data.profilePic}
-                //  Timestamp={posts.data.timestamp}
-                // userName={posts.data.username}
-                //  message={posts.data.message}
+               <Posts />
+              
 
-                 />
-                {/* } )} */}
-            
+                
                 
 
             </div>

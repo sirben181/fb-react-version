@@ -18,7 +18,7 @@ const Inputcontent = () => {
  const handleSubmit=(e)=>{
    e.preventDefault();
    if(!input)return
-   db.collection("posts",'desc').add({
+   db.collection("posts",'asce').add({
        message:input,
        timestamp:firebase.firestore.FieldValue
        .serverTimestamp(),
