@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { useStateValue } from './StateProvider';
+// import { useStateValue } from './StateProvider';
 import db from './firebase'
 import Post from './Post';
 
 const Posts = () => {
   const [posts,setPosts]=useState([])
-  const[{user},dispatch]=useStateValue()
+  // const[{user},dispatch]=useStateValue()
    
   useEffect(()=>{
       db.collection('posts')

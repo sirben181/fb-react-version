@@ -1,0 +1,19 @@
+.post{
+    display:flex;
+    height:auto;
+    width:100%;
+    background:#ddd;
+}
+.wrapper{
+    display:flex;
+    flex-direction:column;
+
+}
+.smallProfile{
+    display:flex;
+    align-content:center;
+    margin:20px;
+}
+.username{
+    font-size:20px;
+}
